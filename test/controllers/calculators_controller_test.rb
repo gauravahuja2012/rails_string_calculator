@@ -14,6 +14,9 @@ class CalculatorsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'calculates sum with newlines' do
+    post calculators_path, params: { input: "1\n2,3" }
+    assert_response :success
+    assert_includes @response.body, "6"
   end
 
   test 'returns error for negative numbers' do
