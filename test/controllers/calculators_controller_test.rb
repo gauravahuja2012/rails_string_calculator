@@ -8,6 +8,9 @@ class CalculatorsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'calculates sum with custom delimiter' do
+    post calculators_path, params: { input: "//;\n1;2" }
+    assert_response :success
+    assert_includes @response.body, "3"
   end
 
   test 'calculates sum with newlines' do
