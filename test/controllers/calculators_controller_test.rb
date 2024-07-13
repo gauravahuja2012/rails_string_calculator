@@ -20,6 +20,9 @@ class CalculatorsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'returns error for negative numbers' do
+    post calculators_path, params: { input: "1,-2,3" }
+    assert_response :success  # Adjust based on how you handle errors
+    assert_includes @response.body, "negative numbers not allowed"
   end
 
   test 'returns 0 for empty input' do
