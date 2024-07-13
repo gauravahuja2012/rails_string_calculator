@@ -4,7 +4,7 @@ class CalculatorsControllerTest < ActionDispatch::IntegrationTest
   test 'calculates sum with default delimiters' do
     post calculators_path, params: { input: "1,2,3" }
     assert_response :success
-    assert_includes @response.body, "6"  # Adjust based on your response format
+    assert_includes @response.body, "6" 
   end
 
   test 'calculates sum with custom delimiter' do
@@ -21,7 +21,7 @@ class CalculatorsControllerTest < ActionDispatch::IntegrationTest
 
   test 'returns error for negative numbers' do
     post calculators_path, params: { input: "1,-2,3" }
-    assert_response :success  # Adjust based on how you handle errors
+    assert_response :success 
     assert_includes @response.body, "negative numbers not allowed"
   end
 
