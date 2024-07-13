@@ -1,0 +1,15 @@
+<h1>String Calculator</h1>
+<% if @result %>
+  <h2>Result: <%= @result %></h2>
+<% elsif @error %>
+  <h2>Error: <%= @error %></h2>
+<% end %>
+<%= form_with url: calculators_path, method: :post, local: true do %>
+  <div>
+    <%= label_tag :input, "Enter numbers:" %>
+    <%= text_area_tag :input %>
+  </div>
+  <div>
+    <%= submit_tag "Calculate" %>
+  </div>
+<% end %>
