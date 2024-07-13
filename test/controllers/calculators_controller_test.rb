@@ -26,5 +26,8 @@ class CalculatorsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'returns 0 for empty input' do
+    post calculators_path, params: { input: "" }
+    assert_response :success
+    assert_includes @response.body, "0"
   end
 end
