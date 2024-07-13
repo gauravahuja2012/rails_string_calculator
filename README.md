@@ -1,24 +1,24 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Rails String Calculator
 
-Things you may want to cover:
+This is a simple Rails application that implements a string calculator. The string calculator can handle addition of numbers in a string with various delimiters and formats.
 
-* Ruby version
+## Features
 
-* System dependencies
+- Add numbers separated by commas or newlines.
+- Supports custom delimiters.
+- Returns an error for negative numbers and non-numeric values.
 
-* Configuration
+## Getting Started
 
-* Database creation
+### Prerequisites
 
-* Database initialization
+- Ruby (version 2.7.1 or higher)
+- Rails (version 6.0 or higher)
 
-* How to run the test suite
+### Installation
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+1. Clone the repository:
+   ```bash
+   git clone git@github.com:gauravahuja2012/rails_string_calculator.git
