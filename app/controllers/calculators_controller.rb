@@ -1,4 +1,5 @@
 class CalculatorsController < ApplicationController
+  #adding test comment
   def index
     redirect_to new_calculator_path
   end
